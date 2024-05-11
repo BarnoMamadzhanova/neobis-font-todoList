@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To do List</title>
+</head>
+
+<body>
+
+    <main>
+
+        <form action="" id="taskForm">
+            <input type="text" id="name" name="name"><br>
+            <input type="radio" id="business" name="category" value="Business"> <label for="business">Business</label>
+            <input type="radio" id="personal" name="category" value="Personal"> <label
+                for="personal">Personal</label><br>
+            <input type="submit" value="Add task">
+        </form>
+
+        <div id="tasks">
+            <div class="task task-single" data-id="12345">
+                <span class="task__category">Category</span>
+                <p class="task__name">Name</p>
+                <button class="task__button" id="btnEdit">Edit</button>
+                <button class="task__button" id="btnDelete">Delete</button>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+<script src="./script/main.js"></script>
+
+</html>
