@@ -27,10 +27,10 @@ addNewTask.addEventListener("submit", (e) => {
   if (name.value == "" || !selectedCategory) {
     alert("Please give a name or select a category!");
   } else {
-    alert("Saved!");
+    //alert("Saved!");
 
     let task = new Task(generateRandomId(), name.value, selectedCategory.value);
-    todoList.push(task);
+    // todoList.push(task);
     displayNewTask(task);
 
     name.value = "";
@@ -50,7 +50,7 @@ function generateRandomId() {
 function displayNewTask(task) {
   let newTask = `<div class="task task-single" data-id="${task.id}">
           <span class="task__category">${task.category}</span>
-          <p class="task__name">${task.name}</p>
+          <input type="text" class="task__name" name="task__name" value="${task.name}" readonly><br>         
           <button class="task__button task__button--edit" onclick="editTask('${task.id}')">Edit</button>
           <button class="task__button task__button--delete" onclick="deleteTask('${task.id}')">Delete</button>
         </div>`;
@@ -59,7 +59,22 @@ function displayNewTask(task) {
 
 function deleteTask(id) {
   let isNotThisId = (elem) => elem.id !== id;
-  todoList = todoList.filter(isNotThisId);
+  // todoList = todoList.filter(isNotThisId);
 
   document.querySelector(`.task-single[data-id="${id}"]`).remove();
+}
+
+function editTask(id) {
+  let inputName = document.querySelector(
+    `.task-single[data-id="${id}"] input.task__name`
+  );
+  inputName.readOnly = false;
+
+  inputName.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      // todoList.find();
+      inputName.readOnly = true;
+    }
+  });
 }
