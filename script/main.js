@@ -1,5 +1,3 @@
-let todoList = [];
-
 const tasks = document.getElementById("tasks");
 
 class Task {
@@ -10,9 +8,6 @@ class Task {
     this.status = status;
   }
 }
-
-// todoList.push(new Task(1, "1 Name", "cat"));
-// console.log(todoList);
 
 let addNewTask = document.getElementById("taskForm");
 addNewTask.addEventListener("submit", (e) => {
@@ -49,7 +44,7 @@ function generateRandomId() {
 
 function displayNewTask(task) {
   let newTask = `<div class="task task-single" data-id="${task.id}">
-          <span class="task__category">${task.category}</span>
+          <span class="task__category" onclick="doneTask('${task.id}')">${task.category}</span>
           <input type="text" class="task__name" name="task__name" value="${task.name}" readonly><br>         
           <button class="task__button task__button--edit" onclick="editTask('${task.id}')">Edit</button>
           <button class="task__button task__button--delete" onclick="deleteTask('${task.id}')">Delete</button>
@@ -57,11 +52,8 @@ function displayNewTask(task) {
   tasks.insertAdjacentHTML("beforeend", newTask);
 }
 
-function deleteTask(id) {
-  let isNotThisId = (elem) => elem.id !== id;
-  // todoList = todoList.filter(isNotThisId);
-
-  document.querySelector(`.task-single[data-id="${id}"]`).remove();
+function doneTask(id) {
+  document.querySelector(`.task-single[data-id="${id}"]`).classList.add("done");
 }
 
 function editTask(id) {
@@ -77,4 +69,10 @@ function editTask(id) {
       inputName.readOnly = true;
     }
   });
+}
+
+function deleteTask(id) {
+  // let isNotThisId = (elem) => elem.id !== id;
+  // todoList = todoList.filter(isNotThisId);
+  document.querySelector(`.task-single[data-id="${id}"]`).remove();
 }
