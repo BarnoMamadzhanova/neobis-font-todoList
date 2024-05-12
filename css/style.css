@@ -168,11 +168,12 @@ main {
   border-color: rgb(246, 12, 242);
 }
 .task-single .task-single__info-box .task__name {
-  font-size: 22px;
+  font-size: 20px;
   border: none;
   border-radius: 0.5rem;
   color: #01017a;
   background: white;
+  font-family: "Montserrat", sans-serif !important;
 }
 .task-single .task-single__info-box .task__name:focus, .task-single .task-single__info-box .task__name:focus-visible, .task-single .task-single__info-box .task__name:focus-within, .task-single .task-single__info-box .task__name:active, .task-single .task-single__info-box .task__name:hover {
   border: none;

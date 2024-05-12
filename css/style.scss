@@ -203,11 +203,12 @@ main {
         }
 
         .task__name {
-            font-size: 22px;
+            font-size: 20px;
             border: none;
             border-radius: 0.5rem;
             color: $accent-color;
             background: $background-color-input;
+            font-family: "Montserrat", sans-serif !important;
 
             &:focus,
             &:focus-visible,
