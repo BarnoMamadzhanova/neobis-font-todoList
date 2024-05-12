@@ -44,10 +44,15 @@ function generateRandomId() {
 
 function displayNewTask(task) {
   let newTask = `<div class="task task-single" data-id="${task.id}">
-          <span class="task__category" onclick="doneTask('${task.id}')">${task.category}</span>
-          <input type="text" class="task__name" name="task__name" value="${task.name}" readonly><br>         
-          <button class="task__button task__button--edit" onclick="editTask('${task.id}')">Edit</button>
-          <button class="task__button task__button--delete" onclick="deleteTask('${task.id}')">Delete</button>
+          <div class="task-single__info-box">
+            <span class="task__category task__category--${task.category}" onclick="doneTask('${task.id}')"></span>
+            <input type="text" class="task__name" name="task__name" value="${task.name}" readonly>
+          </div>
+          <div class="task-single__button-box">
+            <button class="task__button task__button--edit" onclick="editTask('${task.id}')">Edit</button>
+            <button class="task__button task__button--delete" onclick="deleteTask('${task.id}')">Delete</button>
+          </div>    
+          
         </div>`;
   tasks.insertAdjacentHTML("beforeend", newTask);
 }

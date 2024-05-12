@@ -84,6 +84,34 @@ main {
 .task__form .task__form__radiobox .task__form__radiobox__item:hover {
   cursor: pointer;
 }
+.task__form .task__form__radiobox .task__form__radiobox__item #business {
+  border-color: rgb(3, 120, 254);
+  cursor: pointer;
+  width: 24px;
+  aspect-ratio: 1;
+  border: 2px solid white;
+  border-radius: 90px;
+  background: transparent;
+  outline: 3px solid white;
+  outline-offset: -4px;
+}
+.task__form .task__form__radiobox .task__form__radiobox__item #business:checked {
+  background: rgb(3, 120, 254);
+}
+.task__form .task__form__radiobox .task__form__radiobox__item #personal {
+  border-color: rgb(246, 12, 242);
+  cursor: pointer;
+  width: 24px;
+  aspect-ratio: 1;
+  border: 2px solid white;
+  border-radius: 90px;
+  background: transparent;
+  outline: 3px solid white;
+  outline-offset: -4px;
+}
+.task__form .task__form__radiobox .task__form__radiobox__item #personal:checked {
+  background: rgb(246, 12, 242);
+}
 .task__form .task__form__submit--btn {
   font-size: 18px;
   border: none;
@@ -101,4 +129,86 @@ main {
   margin: 0.5rem 0 1rem 0;
   font-size: 28px;
   color: #01017a;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-single {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  padding: 10px;
+  background: white;
+}
+.task-single .task-single__info-box {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.task-single .task-single__info-box .task__category {
+  cursor: pointer;
+  width: 24px;
+  aspect-ratio: 1;
+  border: 2px solid white;
+  border-radius: 90px;
+  background: transparent;
+  outline: 3px solid white;
+  outline-offset: -4px;
+}
+.task-single .task-single__info-box .task__category--Business {
+  border-color: rgb(3, 120, 254);
+}
+.task-single .task-single__info-box .task__category--Personal {
+  border-color: rgb(246, 12, 242);
+}
+.task-single .task-single__info-box .task__name {
+  font-size: 22px;
+  border: none;
+  border-radius: 0.5rem;
+  color: #01017a;
+  background: white;
+}
+.task-single .task-single__info-box .task__name:focus, .task-single .task-single__info-box .task__name:focus-visible, .task-single .task-single__info-box .task__name:focus-within, .task-single .task-single__info-box .task__name:active, .task-single .task-single__info-box .task__name:hover {
+  border: none;
+  outline: none;
+}
+.task-single .task-single__button-box {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+.task-single .task-single__button-box .task__button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 12px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+.task-single .task-single__button-box .task__button:hover {
+  opacity: 0.8;
+}
+.task-single .task-single__button-box .task__button--edit {
+  background-color: rgb(246, 12, 242);
+}
+.task-single .task-single__button-box .task__button--delete {
+  background-color: rgb(255, 55, 0);
+}
+.task-single.done .task__category--Business {
+  background: rgb(3, 120, 254);
+}
+.task-single.done .task__category--Personal {
+  background: rgb(246, 12, 242);
+}
+.task-single.done .task__name {
+  text-decoration: line-through;
+  color: grey;
 }/*# sourceMappingURL=style.css.map */

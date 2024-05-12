@@ -8,6 +8,8 @@ $btn-color: white;
 $submit-btn-bgcolor: rgb(3, 120, 254);
 $hover-opacity: 0.8;
 
+$color-category1: $submit-btn-bgcolor;
+$color-category2: $edit-btn-bgcolor;
 
 body {
     font-family: "Montserrat", sans-serif !important;
@@ -81,7 +83,6 @@ main {
     .task__form__radiobox {
         display: flex;
         flex-direction: row;
-        // gap: 1rem;
         justify-content: space-between;
 
         .task__form__radiobox__item {
@@ -100,6 +101,41 @@ main {
             &:hover {
                 cursor: pointer;
             }
+
+
+            #business {
+                border-color: $color-category1;
+                cursor: pointer;
+                width: 24px;
+                aspect-ratio: 1;
+                border: 2px solid white;
+                border-radius: 90px;
+                background: transparent;
+                outline: 3px solid white;
+                outline-offset: -4px;
+
+                &:checked {
+                    background: $color-category1;
+                }
+            }
+
+            #personal {
+                border-color: $color-category2;
+                cursor: pointer;
+                width: 24px;
+                aspect-ratio: 1;
+                border: 2px solid white;
+                border-radius: 90px;
+                background: transparent;
+                outline: 3px solid white;
+                outline-offset: -4px;
+
+                &:checked {
+                    background: $color-category2;
+                }
+            }
+
+
 
         }
     }
@@ -124,4 +160,112 @@ main {
     margin: 0.5rem 0 1rem 0;
     font-size: 28px;
     color: $accent-color;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.task-single {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    padding: 10px;
+    background: $background-color-input;
+
+    .task-single__info-box {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        // justify-content: space-between;
+        align-items: center;
+
+        .task__category {
+            cursor: pointer;
+            width: 24px;
+            aspect-ratio: 1;
+            border: 2px solid white;
+            border-radius: 90px;
+            background: transparent;
+            outline: 3px solid white;
+            outline-offset: -4px;
+
+            &--Business {
+                border-color: $color-category1;
+            }
+
+            &--Personal {
+                border-color: $color-category2;
+            }
+        }
+
+        .task__name {
+            font-size: 22px;
+            border: none;
+            border-radius: 0.5rem;
+            color: $accent-color;
+            background: $background-color-input;
+
+            &:focus,
+            &:focus-visible,
+            &:focus-within,
+            &:active,
+            &:hover {
+                border: none;
+                outline: none;
+            }
+        }
+
+
+    }
+
+    .task-single__button-box {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        justify-content: space-between;
+        align-items: center;
+
+        .task__button {
+            width: fit-content;
+            padding: 8px 12px;
+            color: $btn-color;
+            border: none;
+            border-radius: 10px;
+
+            &:hover {
+                opacity: $hover-opacity;
+            }
+        }
+
+        .task__button--edit {
+            background-color: $edit-btn-bgcolor;
+        }
+
+        .task__button--delete {
+            background-color: $delete-btn-bgcolor;
+        }
+    }
+
+    &.done {
+
+        .task__category {
+            &--Business {
+                background: $color-category1;
+            }
+
+            &--Personal {
+                background: $color-category2;
+            }
+        }
+
+        .task__name {
+            text-decoration: line-through;
+            color: $label-color;
+        }
+
+    }
 }
