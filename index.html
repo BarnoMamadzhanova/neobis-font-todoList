@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
     <title>To do List</title>
 </head>
 
@@ -12,17 +15,41 @@
 
     <main>
 
-        <form id="taskForm">
-            <input type="text" id="name" name="name"><br>
-            <input type="radio" id="business" name="category" value="Business"> <label for="business">Business</label>
-            <input type="radio" id="personal" name="category" value="Personal"> <label
-                for="personal">Personal</label><br>
-            <input type="submit" value="Add task">
+        <form class="welcome__form">
+            <label for="userName">What's up, </label>
+            <input type="text" id="userName" name="userName" class="welcome__form__input">
+        </form>
+
+        <div class="todo__header">
+            <h6>CREATE A TODO</h6>
+        </div>
+
+        <form id="taskForm" class="task__form">
+            <label for="name" class="task__form__secondary-text">What's on your todo list?</label>
+            <input type="text" id="name" name="name" class="name">
+            <label for="radio" class="task__form__secondary-text">Pick a category </label>
+            <div class="task__form__radiobox">
+                <div class="task__form__radiobox__item">
+                    <input type="radio" id="business" name="category" value="Business">
+                    <label for="business">Business</label>
+                </div>
+
+                <div class="task__form__radiobox__item">
+                    <input type="radio" id="personal" name="category" value="Personal">
+                    <label for="personal">Personal</label>
+                </div>
+
+            </div>
+
+            <input type="submit" value="Add todo" class="task__form__submit--btn">
 
         </form>
 
-        <div id="tasks">
+        <div class="display__todo-list">
+            <h6>TODO LIST</h6>
+        </div>
 
+        <div id="tasks">
 
         </div>
 

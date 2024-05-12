@@ -1,0 +1,104 @@
+body {
+  font-family: "Montserrat", sans-serif !important;
+  background-color: rgb(238, 234, 231);
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 600px;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.welcome__form,
+.welcome__form__input {
+  margin: 0.5rem 0;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  padding: 5px 0;
+  color: #01017a;
+  background: transparent;
+  font-family: "Montserrat", sans-serif !important;
+}
+.welcome__form:focus, .welcome__form:focus-visible, .welcome__form:focus-within, .welcome__form:active, .welcome__form:hover,
+.welcome__form__input:focus,
+.welcome__form__input:focus-visible,
+.welcome__form__input:focus-within,
+.welcome__form__input:active,
+.welcome__form__input:hover {
+  border: none;
+  outline: none;
+}
+
+.todo__header {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 28px;
+  color: #01017a;
+}
+
+.task__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+  margin: 1rem 0;
+}
+.task__form .task__form__secondary-text {
+  color: grey;
+  font-weight: bold;
+}
+.task__form .name {
+  font-size: 22px;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 8px 0;
+  color: #01017a;
+  background: white;
+  font-family: "Montserrat", sans-serif !important;
+}
+.task__form .task__form__radiobox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.task__form .task__form__radiobox .task__form__radiobox__item {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.8rem 0;
+  color: #01017a;
+  background: white;
+}
+.task__form .task__form__radiobox .task__form__radiobox__item:hover {
+  cursor: pointer;
+}
+.task__form .task__form__submit--btn {
+  font-size: 18px;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 12px 0;
+  color: white;
+  background: rgb(3, 120, 254);
+}
+.task__form .task__form__submit--btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.display__todo-list {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 28px;
+  color: #01017a;
+}/*# sourceMappingURL=style.css.map */
