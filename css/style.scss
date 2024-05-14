@@ -104,11 +104,10 @@ main {
 
 
             #business {
-                border-color: $color-category1;
                 cursor: pointer;
                 width: 24px;
                 aspect-ratio: 1;
-                border: 2px solid white;
+                border: 2px solid $color-category1;
                 border-radius: 90px;
                 background: transparent;
                 outline: 3px solid white;
@@ -120,11 +119,10 @@ main {
             }
 
             #personal {
-                border-color: $color-category2;
                 cursor: pointer;
                 width: 24px;
                 aspect-ratio: 1;
-                border: 2px solid white;
+                border: 2px solid $color-category2;
                 border-radius: 90px;
                 background: transparent;
                 outline: 3px solid white;
@@ -134,9 +132,6 @@ main {
                     background: $color-category2;
                 }
             }
-
-
-
         }
     }
 

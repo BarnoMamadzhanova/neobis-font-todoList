@@ -85,11 +85,10 @@ main {
   cursor: pointer;
 }
 .task__form .task__form__radiobox .task__form__radiobox__item #business {
-  border-color: rgb(3, 120, 254);
   cursor: pointer;
   width: 24px;
   aspect-ratio: 1;
-  border: 2px solid white;
+  border: 2px solid rgb(3, 120, 254);
   border-radius: 90px;
   background: transparent;
   outline: 3px solid white;
@@ -99,11 +98,10 @@ main {
   background: rgb(3, 120, 254);
 }
 .task__form .task__form__radiobox .task__form__radiobox__item #personal {
-  border-color: rgb(246, 12, 242);
   cursor: pointer;
   width: 24px;
   aspect-ratio: 1;
-  border: 2px solid white;
+  border: 2px solid rgb(246, 12, 242);
   border-radius: 90px;
   background: transparent;
   outline: 3px solid white;
