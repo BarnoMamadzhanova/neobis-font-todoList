@@ -37,7 +37,6 @@ main {
     font-size: 28px;
     font-weight: bold;
     border: none;
-    padding: 5px 0;
     color: $accent-color;
     background: transparent;
     font-family: "Montserrat", sans-serif !important;
@@ -74,7 +73,7 @@ main {
         font-size: 22px;
         border: none;
         border-radius: 0.5rem;
-        padding: 8px 0;
+        padding: 8px 10px;
         color: $accent-color;
         background: $background-color-input;
         font-family: "Montserrat", sans-serif !important;
@@ -98,10 +97,6 @@ main {
             color: $accent-color;
             background: $background-color-input;
 
-            &:hover {
-                cursor: pointer;
-            }
-
 
             #business {
                 cursor: pointer;
@@ -114,7 +109,7 @@ main {
                 outline-offset: -4px;
 
                 &:checked {
-                    background: $color-category1;
+                    background-color: $color-category1;
                 }
             }
 
@@ -129,7 +124,7 @@ main {
                 outline-offset: -4px;
 
                 &:checked {
-                    background: $color-category2;
+                    background-color: $color-category2;
                 }
             }
         }

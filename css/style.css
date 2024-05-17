@@ -23,7 +23,6 @@ main {
   font-size: 28px;
   font-weight: bold;
   border: none;
-  padding: 5px 0;
   color: #01017a;
   background: transparent;
   font-family: "Montserrat", sans-serif !important;
@@ -58,7 +57,7 @@ main {
   font-size: 22px;
   border: none;
   border-radius: 0.5rem;
-  padding: 8px 0;
+  padding: 8px 10px;
   color: #01017a;
   background: white;
   font-family: "Montserrat", sans-serif !important;
@@ -81,9 +80,6 @@ main {
   color: #01017a;
   background: white;
 }
-.task__form .task__form__radiobox .task__form__radiobox__item:hover {
-  cursor: pointer;
-}
 .task__form .task__form__radiobox .task__form__radiobox__item #business {
   cursor: pointer;
   width: 24px;
@@ -95,7 +91,7 @@ main {
   outline-offset: -4px;
 }
 .task__form .task__form__radiobox .task__form__radiobox__item #business:checked {
-  background: rgb(3, 120, 254);
+  background-color: rgb(3, 120, 254);
 }
 .task__form .task__form__radiobox .task__form__radiobox__item #personal {
   cursor: pointer;
@@ -108,7 +104,7 @@ main {
   outline-offset: -4px;
 }
 .task__form .task__form__radiobox .task__form__radiobox__item #personal:checked {
-  background: rgb(246, 12, 242);
+  background-color: rgb(246, 12, 242);
 }
 .task__form .task__form__submit--btn {
   font-size: 18px;
